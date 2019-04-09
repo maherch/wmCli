@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {SidebarComponent} from './sidebar/sidebar.component';
+import {ListAuditeurComponent} from './Components/list-auditeur/list-auditeur.component';
+import {AddAuditeurComponent} from './Components/add-auditeur/add-auditeur.component';
 
 const routes: Routes = [
 
-  { path: 'login', component: LoginComponent },
-  { path: 'home', component: SidebarComponent}
+  {path: 'auditeur', component: ListAuditeurComponent},
+  {path:'addAuditeur',component:AddAuditeurComponent},
 ];
 
 @NgModule({

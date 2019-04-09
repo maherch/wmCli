@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SidebarService } from './sidebar/sidebar.service';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
