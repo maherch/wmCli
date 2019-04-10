@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SidebarService } from './sidebar/sidebar.service';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
 @Component({
@@ -9,18 +8,6 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 })
 export class AppComponent {
   title = 'angular-pro-sidebar';
-  constructor(public sidebarservice: SidebarService) { }
-  toggleSidebar() {
-    this.sidebarservice.setSidebarState(!this.sidebarservice.getSidebarState());
-  }
-  toggleBackgroundImage() {
-    this.sidebarservice.hasBackgroundImage = !this.sidebarservice.hasBackgroundImage;
-  }
-  getSideBarState() {
-    return this.sidebarservice.getSidebarState();
-  }
+  constructor() { }
 
-  hideSidebar() {
-    this.sidebarservice.setSidebarState(true);
-  }
 }

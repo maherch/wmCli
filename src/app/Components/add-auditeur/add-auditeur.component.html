@@ -6,11 +6,11 @@
   <div class="container">
     <div class="row">
       <div class="col-sm">
-        <img id="profileImg" class="mr-3 align-self-center rounded-circle" style="width:150px;height:150px;" >
+        <img id="profileImg" src="../../../assets/img/user.png" class="mr-3 align-self-center rounded-circle" style="width:150px;height:145px;" >
 
         <div class="form-group">
-          <label>ImageURL</label>
-          <input class="form-control" #photoUrl />
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+
         </div>
 
 
@@ -30,7 +30,7 @@
 
         <div class="form-group">
           <label>Mot de passe</label>
-          <input class="form-control" #motPass />
+          <input type="password" class="form-control" #motPass />
         </div>
 
 
@@ -50,7 +50,7 @@
         <!--n'existe pas dans la base-->
         <div class="form-group">
           <label>Confirmer Mot de passe</label>
-          <input #city class="form-control"  />
+          <input type="password" #city class="form-control"  />
         </div>
 
 
