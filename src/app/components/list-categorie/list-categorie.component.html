@@ -1,0 +1,75 @@
+<div class="table-responsive">
+  <table class="table">
+
+    <thead>
+    <tr>
+      <th scope="col">Nom categorie</th>
+      <th scope="col">Description</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"><button class="btn btn-danger" (click)="on();"> <i class="fas fa-plus"></i> Ajouter </button></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let categorie of categories">
+      <td>{{categorie.nomCategorie}}</td>
+      <td>{{categorie.descriptionCategorie}}</td>
+      <td><button id="DetailCategorie" type="button" (click)="onN(categorie.idCategorie)" class="btn btn-danger">Détails  </button>
+      </td>
+      <td><button (click)="onNUpdate(categorie.idCategorie)" class="btn btn-danger">Modifier</button></td>
+      <td><button id="DeleteCategorie" (click)="delete(categorie.idCategorie)" class="btn btn-danger">
+        Supprimer
+      </button></td>
+    </tr>
+
+
+    </tbody>
+  </table>
+</div>
+
+<!-- interface add categorie-->
+<div id="overlay">
+  <div id="overlayinside">
+    <div class="alert alert-light" role="alert">
+      <a class="d-flex justify-content-end" (click)="off();" >
+        <i class="far fa-times-circle"></i>
+      </a>
+      <app-add-categorie></app-add-categorie>
+    </div>
+  </div>
+</div>
+
+
+<!--interface detail categorie-->
+<div id="overlay2">
+  <div id="overlayinside2">
+    <div class="alert alert-light" role="alert">
+      <a class="d-flex justify-content-end" (click)="ofF();" ><i class="far fa-times-circle"></i>
+      </a>
+      <app-detail-categorie [categorieIn]="selectedCategorie"> </app-detail-categorie>
+    </div>
+  </div>
+</div>
+
+<!-- interface update categorie-->
+<div id="overlay3">
+  <div id="overlayinside3">
+    <div class="alert alert-light" role="alert">
+      <a class="d-flex justify-content-end" (click)="ofFUpdate()" ><i class="far fa-times-circle"></i>
+      </a>
+      <app-update-categorie [categorieIn]="selectedCategorie" ></app-update-categorie>
+    </div>
+  </div>
+</div>
+
+<!--interface delete categorie-->
+<div id="overlayDelete">
+  <div id="overlayinsideDelete">
+    <div class="alert alert-light" role="alert">
+      <a class="d-flex justify-content-end" (click)="offDelete()" ><i class="far fa-times-circle"></i>
+      </a>
+      <app-delete-categorie [categorieIn]="selectedCategorie"></app-delete-categorie>
+    </div>
+  </div>
+</div>
+
