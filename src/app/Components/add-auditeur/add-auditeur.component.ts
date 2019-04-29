@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Auditeur} from '../../models/Auditeur';
-import {AuditeurService} from '../../service/auditeur.service';
+import {AuditeurService} from '../../services/auditeur.service';
 
 @Component({
   selector: 'app-add-auditeur',
@@ -9,7 +9,7 @@ import {AuditeurService} from '../../service/auditeur.service';
 })
 export class AddAuditeurComponent implements OnInit {
 
-  responsable:Auditeur;
+
   auditeurs: Auditeur[]=[];
 
   constructor(private auditeurService: AuditeurService) { }
@@ -23,15 +23,15 @@ export class AddAuditeurComponent implements OnInit {
     nom: string,
     prenom: string,
     datenais:string,
-
     cin: string,
     sexe: string,
     type: string,
     email: string,
     telephone:string,
     pays: string,
-    NomUtili: string,
+    nomUtili: string,
     motPass:string,
+    ProfilePic:string
   ): void {
     this.auditeurService.addAuditeur({
       id,
@@ -44,8 +44,9 @@ export class AddAuditeurComponent implements OnInit {
       email,
       telephone,
       pays,
-      NomUtili,
+      nomUtili,
       motPass,
+      ProfilePic,
       } as Auditeur)
       .subscribe(auditeur => {
         this.auditeurs.push(auditeur);

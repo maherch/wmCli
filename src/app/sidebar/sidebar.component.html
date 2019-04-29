@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
@@ -21,33 +21,60 @@
 <mat-drawer-container class="example-container" autosize >
   <mat-drawer class="example-sidenav" #drawer id="sidebar" mode="side">
     <div class="sidebar-header">
-      <h3>BOOTSTRAP SIDEBAR</h3>
+
+      <div class="form-inline">
+      <img src="../../assets/img/1.png"  style="width:45px;height:50px;">
+        &nbsp;
+        <label> <b>Amine Rached</b> </label>
+      </div>
     </div>
 
 
     <ul class="list-unstyled components">
       <li class="active">
-        <a href="#" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> <span class="glyphicon glyphicon-dashboard"></span> Tableau de bord </a>
+        <div class="form-inline">
+          <i class="material-icons" style="font-size:30px;color:white;margin-top:15px;">dashboard</i>
+          <a href="#">  <span class="glyphicon glyphicon-dashboard"></span>Tableau de bord</a>
+
+        </div>
       </li>
 
       <li>
+        <div class="form-inline">
+          <i class="fa fa-users" style="font-size:30px;color:white;margin-top:15px;"></i>
         <a routerLink="auditeur">Utilisateurs</a>
+        </div>
       </li>
       <li>
-        <a routerLink="missions" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Missions</a>
+        <div class="form-inline">
+          <i class='far fa-envelope' style='font-size:30px;color:white;margin-top:15px;'></i>
+          <a routerLink="missions">Missions</a>
+        </div>
       </li>
       <li>
-        <a href="#">Catégories</a>
+        <div class="form-inline">
+          <i class='far fa-clone' style='font-size:30px;color:white;margin-top:15px;'></i>
+          <a routerLink="categorie">Catégories</a>
+        </div>
       </li>
       <li>
-        <a href="#">Suivi</a>
+        <div class="form-inline">
+        <i class="material-icons" style="font-size:30px;color:white;margin-top:15px;">work</i>
+        <a href="#">espace de travail</a>
+        </div>
       </li>
 
       <li>
-        <a href="#">Notifications</a>
+        <div class="form-inline">
+          <i class="material-icons" style="font-size:30px;color:white;margin-top:15px;">notifications</i>
+          <a href="#">Notifications</a>
+        </div>
       </li>
       <li>
+        <div class="form-inline">
+          <i class="material-icons" style="font-size:30px;color:white;margin-top:15px;">power_settings_new</i>
         <a href="#">Deconnexion</a>
+        </div>
       </li>
     </ul>
 
@@ -65,22 +92,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-      </div>
+
     </nav>
 
 

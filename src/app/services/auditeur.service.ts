@@ -27,7 +27,7 @@ export class AuditeurService {
     return this.http.post<Auditeur>(this.auditeurUrl, auditeur, httpOptions);
   }
 
-  updateAuditeur(id:number,auditeur: Auditeur): Observable<any> {
+  updateAuditeur(id: number, auditeur: Auditeur): Observable<any> {
     const url = `${this.auditeurUrl}/${id}`;
     return this.http.put<Auditeur>(url, auditeur, httpOptions);
   }

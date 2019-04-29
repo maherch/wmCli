@@ -1,4 +1,10 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
   #overlay {
     position: fixed;
@@ -20,7 +26,7 @@
     position: absolute;
 
     height: 60%;
-    width: 60%;
+    width: 50%;
 
     right: 20%;
     top: 5%;
@@ -108,12 +114,10 @@
 <div class="col-4">
 
 
-
-  <a  class="btn btn-primary a-btn-slide-text">
-    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-    <span><strong>Ajouter</strong></span>
+  <a (click)="on()" style="color: white"  class="btn btn-primary a-btn-slide-text">
+    <i class="fas fa-plus"></i>
+    <span><strong>Créer</strong></span>
   </a>
-
 
 
 
@@ -144,26 +148,28 @@
 
 
     <tbody>
-    <tr >
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td> <a  class="btn btn-primary a-btn-slide-text">
-        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-        <span><strong>Edit</strong></span>
-      </a>
-        <a class="btn btn-primary a-btn-slide-text">
-          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+    <tr *ngFor="let mission of missions">
+      <td>{{mission.nomMission}}</td>
+      <td>Amen Bank</td>
+      <td>{{mission.sujetMission}}</td>
+      <td>audit financier</td>
+      <td>Phase de preparation</td>
+      <td>
+        <a (click)="onNUpdate(mission.idMission)" style="color: white"  class="btn btn-primary a-btn-slide-text">
+          <i class="fas fa-pencil-alt"></i>
+          <span><strong>Edit</strong></span>
+        </a>
+
+        <a (click)="onN(mission.idMission)" style="color: white"  class="btn btn-primary a-btn-slide-text">
+          <i class="fas fa-eye"></i>
           <span><strong>View</strong></span>
         </a>
-        <a class="btn btn-primary a-btn-slide-text">
-          <span class="glyphicon glyphicon-remove" aria-hidden="true"> </span>
+
+        <a (click)="ondelete(mission.idMission)" style="color: white"  class="btn btn-primary a-btn-slide-text">
+          <i class="far fa-trash-alt"></i>
           <span><strong>Delete</strong></span>
-        </a></td>
+        </a>
+      </td>
     </tr>
 
 
@@ -171,4 +177,41 @@
 
   </table>
 
+</div>
+
+<!-- interface ajout mission-->
+<div id="overlay">
+  <div id="overlayinside">
+    <div class="alert alert-light" role="alert">
+      <a class="d-flex justify-content-end" (click)="off()"><i class="far fa-times-circle"></i>
+      </a>
+      <app-add-mission></app-add-mission>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- interface detail mission -->
+
+<div id="overlay2">
+  <div id="overlayinside2">
+    <div class="alert alert-light" role="alert">
+      <a class="d-flex justify-content-end" (click)="ofF();" ><i class="far fa-times-circle"></i>
+      </a>
+      <app-detail-mission [missionIn]="selectedMission"></app-detail-mission>
+    </div>
+  </div>
+</div>
+
+
+<!-- interface update mission -->
+<div id="overlay3">
+  <div id="overlayinside3">
+    <div class="alert alert-light" role="alert">
+      <a class="d-flex justify-content-end" (click)="ofFUpdate()" ><i class="far fa-times-circle"></i>
+      </a>
+      <app-update-mission [missionInUpdate]="selectedMission"></app-update-mission>
+    </div>
+  </div>
 </div>

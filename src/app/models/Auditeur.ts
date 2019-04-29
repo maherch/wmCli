@@ -9,6 +9,7 @@ export class Auditeur{
   email:String;
   telephone:String;
   pays:String;
-  NomUtili:String;
+  nomUtili:String;
   motPass:String
+  ProfilePic:String;
 }

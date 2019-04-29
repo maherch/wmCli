@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { BsDropdownModule } from 'ngx-bootstrap';
 
@@ -22,7 +24,19 @@ import { ListMissionComponent } from './Components/list-mission/list-mission.com
 import {DemoMaterialModule} from './materiel-module';
 import {MatNativeDateModule} from '@angular/material';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { AddCategorieComponent } from './Components/add-categorie/add-categorie.component';
+
+import { ListCategorieComponent } from './Components/list-categorie/list-categorie.component';
+import { DeleteCategorieComponent } from './Components/delete-categorie/delete-categorie.component';
+import { DetailCategorieComponent } from './Components/detail-categorie/detail-categorie.component';
+import { UpdateCategorieComponent } from './Components/update-categorie/update-categorie.component';
+
+
+
+
 import { AddMissionComponent } from './Components/add-mission/add-mission.component';
+import { UpdateMissionComponent } from './Components/update-mission/update-mission.component';
+import { DetailMissionComponent } from './Components/detail-mission/detail-mission.component';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -38,6 +52,13 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     UpdateAuditeurComponent,
     ListMissionComponent,
     AddMissionComponent,
+    AddCategorieComponent,
+    ListCategorieComponent,
+    DeleteCategorieComponent,
+    DetailCategorieComponent,
+    UpdateCategorieComponent,
+    UpdateMissionComponent,
+    DetailMissionComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +72,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     FormsModule,
     HttpClientModule,
     BsDropdownModule.forRoot(),
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
   ],
 
  providers: [ {

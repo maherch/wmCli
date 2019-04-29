@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Auditeur} from '../../models/Auditeur';
-import {AuditeurService} from '../../service/auditeur.service';
+import {AuditeurService} from '../../services/auditeur.service';
 
 @Component({
   selector: 'app-update-auditeur',
@@ -19,7 +19,6 @@ export class UpdateAuditeurComponent implements OnInit {
 
   save(): void {
     this.auditeurService.updateAuditeur(this.auditeurInUpdate.id,this.auditeurInUpdate).subscribe();
-    this.close();
   }
 
   close():void{
