@@ -37,6 +37,13 @@ import { UpdateCategorieComponent } from './Components/update-categorie/update-c
 import { AddMissionComponent } from './Components/add-mission/add-mission.component';
 import { UpdateMissionComponent } from './Components/update-mission/update-mission.component';
 import { DetailMissionComponent } from './Components/detail-mission/detail-mission.component';
+import { UserComponent } from './Components/user/user.component';
+import { PmComponent } from './Components/pm/pm.component';
+import {RegisterComponent} from './Components/register/register.component';
+import { AdminComponent } from './Components/admin/admin.component';
+import {httpInterceptorProviders} from './auth/auth-interceptor';
+import { ListClientComponent } from './Components/list-client/list-client.component';
+import { AddClientComponent } from './Components/add-client/add-client.component';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -58,7 +65,13 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     DetailCategorieComponent,
     UpdateCategorieComponent,
     UpdateMissionComponent,
-    DetailMissionComponent
+    DetailMissionComponent,
+    UserComponent,
+    PmComponent,
+    RegisterComponent,
+    AdminComponent,
+    ListClientComponent,
+    AddClientComponent
   ],
   imports: [
     BrowserModule,
@@ -75,10 +88,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PerfectScrollbarModule,
   ],
 
- providers: [ {
-  provide: PERFECT_SCROLLBAR_CONFIG,
-  useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-}],
+ providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

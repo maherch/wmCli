@@ -7,16 +7,58 @@ import {AddMissionComponent} from './Components/add-mission/add-mission.componen
 import {ListCategorieComponent} from './Components/list-categorie/list-categorie.component';
 import {AddCategorieComponent} from './Components/add-categorie/add-categorie.component';
 import {LoginComponent} from './login/login.component';
+import {SidebarComponent} from './sidebar/sidebar.component';
+import {UserComponent} from './Components/user/user.component';
+import {PmComponent} from './Components/pm/pm.component';
+import {RegisterComponent} from './Components/register/register.component';
+import {AdminComponent} from './Components/admin/admin.component';
+import {ListClientComponent} from './Components/list-client/list-client.component';
 
 const routes: Routes = [
 
+  {
+    path: 'user',
+    component: UserComponent
+  },
+  {
+    path: 'pm',
+    component: PmComponent
+  },
   {path: 'auditeur', component: ListAuditeurComponent},
+  {path: 'home/auditeur', component: ListAuditeurComponent},
   {path:'addAuditeur',component:AddAuditeurComponent},
   {path:'missions',component:ListMissionComponent},
-  {path:'login',component:LoginComponent},
+  {
+    path: 'auth/login',
+    component: LoginComponent
+  },
+
+  {
+    path: 'client',
+    component: ListClientComponent
+  },
+
+  {
+    path: 'categorie',
+    component: ListCategorieComponent
+  },
+
+
+  {
+    path: 'admin',
+    component: AdminComponent
+  },
+
+
   {path:'addMission',component:AddMissionComponent},
-  {path:'categorie',component:ListCategorieComponent},
-  {path:'addCategorie',component:AddCategorieComponent}
+  {path:'home/categorie',component:ListCategorieComponent},
+  {path:'addCategorie',component:AddCategorieComponent},
+  {
+    path: 'signup',
+    component: RegisterComponent
+  },
+
+
 ];
 
 @NgModule({
