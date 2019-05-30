@@ -1,56 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { SidebarService } from './sidebar.service';
+import {MediaMatcher} from '@angular/cdk/layout';
+import {TokenStorageService} from '../auth/token-storage.service';
 // import { MenusService } from './menus.service';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss'],
-  animations: [
-    trigger('slide', [
-      state('up', style({ height: 0 })),
-      state('down', style({ height: '*' })),
-      transition('up <=> down', animate(200))
-    ])
-  ]
+  styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent implements OnInit {
-  menus = [];
-  constructor(public sidebarservice: SidebarService) {
-    this.menus = sidebarservice.getMenuList();
+  info: any;
+  constructor(private token: TokenStorageService) {
    }
 
   ngOnInit() {
+    this.info = {
+      token: this.token.getToken(),
+      username: this.token.getUsername(),
+      authorities: this.token.getAuthorities()
+    };
   }
 
-  getSideBarState() {
-    return this.sidebarservice.getSidebarState();
-  }
-
-  toggle(currentMenu) {
-    if (currentMenu.type === 'dropdown') {
-      this.menus.forEach(element => {
-        if (element === currentMenu) {
-          currentMenu.active = !currentMenu.active;
-        } else {
-          element.active = false;
-        }
-      });
-    }
-  }
-
-  getState(currentMenu) {
-
-    if (currentMenu.active) {
-      return 'down';
-    } else {
-      return 'up';
-    }
-  }
-
-  hasBackgroundImage() {
-    return this.sidebarservice.hasBackgroundImage;
+  logout() {
+    this.token.signOut();
+    window.location.reload();
   }
 
 }
