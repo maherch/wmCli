@@ -13,6 +13,9 @@ import {PmComponent} from './Components/pm/pm.component';
 import {RegisterComponent} from './Components/register/register.component';
 import {AdminComponent} from './Components/admin/admin.component';
 import {ListClientComponent} from './Components/list-client/list-client.component';
+import {EspaceTravailComponent} from './Components/espace-travail/espace-travail.component';
+import {RealiserMissionComponent} from './Components/realiser-mission/realiser-mission.component';
+import {QuestionnaireListComponent} from './Components/questionnaire-list/questionnaire-list.component';
 
 const routes: Routes = [
 
@@ -34,6 +37,11 @@ const routes: Routes = [
   },
 
   {
+    path:'espace',
+  component:EspaceTravailComponent
+  },
+
+  {
     path: 'client',
     component: ListClientComponent
   },
@@ -51,11 +59,25 @@ const routes: Routes = [
 
 
   {path:'addMission',component:AddMissionComponent},
+  {path:'realisation/questionnaire',component:QuestionnaireListComponent},
+
   {path:'home/categorie',component:ListCategorieComponent},
   {path:'addCategorie',component:AddCategorieComponent},
+
   {
     path: 'signup',
     component: RegisterComponent
+  },
+
+  {
+    path: '',
+    redirectTo: 'espace',
+    pathMatch: 'full'
+  },
+
+  {
+    path:'realisation',
+    component: RealiserMissionComponent
   },
 
 

@@ -44,6 +44,11 @@ import { AdminComponent } from './Components/admin/admin.component';
 import {httpInterceptorProviders} from './auth/auth-interceptor';
 import { ListClientComponent } from './Components/list-client/list-client.component';
 import { AddClientComponent } from './Components/add-client/add-client.component';
+import { EspaceTravailComponent } from './Components/espace-travail/espace-travail.component';
+import { RealiserMissionComponent } from './Components/realiser-mission/realiser-mission.component';
+import { NcComponent } from './Components/nc/nc.component';
+import { QuestionnaireListComponent } from './Components/questionnaire-list/questionnaire-list.component';
+import { QuestionsComponent } from './Components/questions/questions.component';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -71,7 +76,12 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     RegisterComponent,
     AdminComponent,
     ListClientComponent,
-    AddClientComponent
+    AddClientComponent,
+    EspaceTravailComponent,
+    RealiserMissionComponent,
+    NcComponent,
+    QuestionnaireListComponent,
+    QuestionsComponent
   ],
   imports: [
     BrowserModule,

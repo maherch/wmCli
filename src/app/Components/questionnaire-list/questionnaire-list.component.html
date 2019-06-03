@@ -1,0 +1,54 @@
+<div class="col-10">
+  <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0">
+    <thead>
+    <tr>
+      <th class="th-sm">Reference
+      </th>
+
+      <th class="th-sm">Titre
+      </th>
+      <th class="th-sm">Description
+      </th>
+      <th class="th-sm">Action
+      </th>
+
+
+    </tr>
+    </thead>
+
+
+
+    <tbody>
+    <tr *ngFor="let quest of questionnaires">
+      <td>{{quest.reference}}</td>
+      <td>{{quest.titre}}</td>
+      <td>{{quest.description}}</td>
+      <td> <a  style="color: white" (click)="onN(quest.id)" class="btn btn-primary a-btn-slide-text">
+        <i class="fas fa-pencil-alt"></i>
+        <span><strong>Remplir</strong></span>
+      </a>
+
+
+
+
+      </td>
+
+    </tr>
+
+
+    </tbody>
+
+  </table>
+
+</div>
+
+
+<div id="overlay2">
+  <div id="overlayinside2">
+    <div class="alert alert-light" role="alert">
+      <a class="d-flex justify-content-end" (click)="off();" ><i class="far fa-times-circle"></i>
+      </a>
+      <app-questions [questionsDisplay]="selectedQuestions"> </app-questions>
+    </div>
+  </div>
+</div>
