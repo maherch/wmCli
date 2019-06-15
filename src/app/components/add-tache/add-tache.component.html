@@ -1,0 +1,53 @@
+<h1 class="display-4">Ajout Taches</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+
+      <div class="form-group">
+        <label>Titre taches</label>
+        <input id="Titretache" class="form-control"  #titre/>
+      </div>
+
+    </div>
+    <div class="col-sm">
+
+      <div class="form-group">
+        <label>Duree taches</label>
+        <input id="Dureetache" class="form-control"  #duree/>
+      </div>
+
+    </div>
+
+    <div class="col-sm">
+
+
+      <div class="form-group">
+        <label>Description</label>
+        <textarea id="DescriptionTache" class="form-control" rows="5"  #description></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+      <button type="button" class="btn btn-primary">Annuler</button> &nbsp;
+      <button class="btn btn-primary" (click)="add(
+  0,
+   titre.value,
+  description.value,
+  duree.value
+  ); ">
+        Enregistrer
+      </button>
+    </div>
+
+  </div>
+</div>

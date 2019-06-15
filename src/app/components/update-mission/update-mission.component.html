@@ -1,0 +1,90 @@
+<div *ngIf="missionInUpdate">
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Nom :</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="inputEmail3" [(ngModel)]="missionInUpdate.nomMission">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Client :</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="inputPassword3">
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Projet :</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" [(ngModel)]="missionInUpdate.sujetMission">
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Nature mission :</label>
+    <div class="col-sm-4">
+      <select class="custom-select mr-sm-2">
+        <option *ngFor="let categorie of categories" value="1">{{categorie.nomCategorie}}</option>
+      </select>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Date depart :</label>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <div class="input-group">
+          <input class="form-control" placeholder="yyyy-mm-dd"
+                 name="dp"  [(ngModel)]="missionInUpdate.dateDebut">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Date fin :</label>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <div class="input-group">
+          <input class="form-control" placeholder="yyyy-mm-dd"
+                 name="dp"   [(ngModel)]="missionInUpdate.dateFin">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary calendar" (click)="dd.toggle()" type="button"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Auditeur :</label>
+    <div class="col-sm-4">
+      <select   class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+        <option selected>Choisir...</option>
+        <option *ngFor="let auditeur of auditeurs" value="1">{{auditeur.NomUtili}}</option>
+
+      </select>
+    </div>
+  </div>
+
+
+
+
+  <button (click)="save()" class="btn btn-primary">enregistrer</button> &nbsp;
+  <button class="btn btn-primary">Annuler</button>
+
+
+
+
+</div>

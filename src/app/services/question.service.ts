@@ -17,6 +17,7 @@ const httpOptions = {
 export class QuestionService {
 
   private  questionUrl = 'http://localhost:8081/questionnaire/questions';
+  private  editquestionUrl = 'http://localhost:8081/question';
 
   constructor(private http: HttpClient) { }
 
@@ -27,7 +28,7 @@ export class QuestionService {
   }
 
   updateQuestion(idQuestion: number, question: Question): Observable<any> {
-    const url = `${this.questionUrl}/${idQuestion}`;
+    const url = `${this.editquestionUrl}/${idQuestion}`;
     return this.http.put<Question>(url, question, httpOptions);
   }
 

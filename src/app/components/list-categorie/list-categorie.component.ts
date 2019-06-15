@@ -63,7 +63,7 @@ export class ListCategorieComponent implements OnInit {
     document.getElementById('overlay3').style.display = 'none';
   }
 
-  // interface delete team
+
   delete(id: number): void {
     this.categorieService.getCategorie(id).subscribe(value => {
       this.selectedCategorie = value;

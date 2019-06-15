@@ -1,0 +1,88 @@
+<div id="overlay">
+  <h5  style="color:black" class="display-5">Fiche client</h5>
+  <hr> <br>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm">
+        <div class="form-group">
+          <label>Nom client</label>
+          <input class="form-control" #nom />
+        </div>
+
+        <div class="form-group">
+          <label>Activité</label>
+          <input class="form-control" #act  />
+        </div>
+
+        <div class="form-group">
+          <label>Adresse</label>
+          <input type="password" class="form-control" #adr />
+        </div>
+
+        <div class="form-group">
+          <label>Telephone</label>
+          <input type="text" #tel class="form-control"/>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="text" #mail class="form-control"/>
+        </div>
+
+      </div>
+      <div class="col-sm">
+        <div class="form-group">
+          <label>Code Postal</label>
+          <input class="form-control" #codep />
+        </div>
+
+        <div class="form-group">
+          <label>Ville</label>
+          <input class="form-control" #ville />
+        </div>
+
+
+        <!--n'existe pas dans la base-->
+        <div class="form-group">
+          <label>Département</label>
+          <input type="text" #dep class="form-control"/>
+        </div>
+
+        <div class="form-group">
+          <label>region</label>
+          <input type="text" #reg class="form-control"/>
+        </div>
+
+        <div class="form-group">
+          <label>Pays</label>
+          <input type="text" #pays class="form-control"/>
+        </div>
+
+
+      </div>
+    </div>
+  </div> <br>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+      </div>
+      <div class="col-sm">
+      </div>
+      <div class="col-sm">
+        <button class="btn  btn-primary" (click)="add(0,
+        codep.value,dep.value,mail.value,pays.value,reg.value,tel.value,'azza',ville.value,act.value,nom.value)">enregistrer</button> &nbsp;
+        <button  class="btn  btn-primary">Annuler</button>
+
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+

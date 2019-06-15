@@ -1,0 +1,57 @@
+<div class="container" *ngIf="auditeurIn">
+  <div class="row">
+    <div class="col">
+
+
+
+    </div>
+
+  </div>
+  <div class="alert alert-secondary" role="alert">
+    <div class="row">
+
+      <div class="col-4">
+        <img src="../../../assets/img/placeholderUser.png" class="rounded-circle" style="width:150px;height:150px;"  >
+      </div>
+      <div class="col-8">
+        <h3>{{auditeurIn.nom}} {{auditeurIn.prenom}}</h3>
+        <div class="row">
+          <div class="col"><h5>Pseudo: </h5> </div>
+          <div class="col">{{auditeurIn.nomUtili}}</div>
+        </div>
+        <div class="row">
+          <div class="col"><h5>email: </h5></div>
+          <div class="col">{{auditeurIn.email}}</div>
+        </div>
+        <div class="row">
+          <div class="col"><h5>cin: </h5></div>
+          <div class="col">{{auditeurIn.cin}}</div>
+        </div>
+        <div class="row">
+          <div class="col"><h5>date de naissance : </h5></div>
+          <div class="col">{{auditeurIn.datenais}}</div>
+        </div>
+
+        <div class="row">
+          <div class="col"><h5>sexe: </h5></div>
+          <div class="col">{{auditeurIn.sexe}}</div>
+        </div>
+
+
+        <div class="row">
+          <div class="col"><h5>ville :  </h5></div>
+          <div class="col">{{auditeurIn.pays}} </div>
+        </div>
+        <div class="row">
+          <div class="col"><h5>Telephone : </h5></div>
+          <div class="col">{{auditeurIn.telephone}}</div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+

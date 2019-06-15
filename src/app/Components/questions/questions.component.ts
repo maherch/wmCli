@@ -15,7 +15,6 @@ import {QuestionnaireListComponent} from '../questionnaire-list/questionnaire-li
 export class QuestionsComponent implements OnInit {
   questions: Question[];
   idx = '0';
-  quest:Question;
 
   @Input() questionsDisplay: Question[];
 
@@ -25,8 +24,8 @@ export class QuestionsComponent implements OnInit {
   ngOnInit() {
   }
 
-  save(): void {
-    this.questionService.updateQuestion(this.quest.id,this.quest).subscribe();
+  save(id:number,question:Question): void {
+    this.questionService.updateQuestion(id, question).subscribe();
   }
 
 

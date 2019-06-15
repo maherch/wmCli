@@ -30,10 +30,6 @@ import { ListCategorieComponent } from './Components/list-categorie/list-categor
 import { DeleteCategorieComponent } from './Components/delete-categorie/delete-categorie.component';
 import { DetailCategorieComponent } from './Components/detail-categorie/detail-categorie.component';
 import { UpdateCategorieComponent } from './Components/update-categorie/update-categorie.component';
-
-
-
-
 import { AddMissionComponent } from './Components/add-mission/add-mission.component';
 import { UpdateMissionComponent } from './Components/update-mission/update-mission.component';
 import { DetailMissionComponent } from './Components/detail-mission/detail-mission.component';
@@ -44,11 +40,24 @@ import { AdminComponent } from './Components/admin/admin.component';
 import {httpInterceptorProviders} from './auth/auth-interceptor';
 import { ListClientComponent } from './Components/list-client/list-client.component';
 import { AddClientComponent } from './Components/add-client/add-client.component';
-import { EspaceTravailComponent } from './Components/espace-travail/espace-travail.component';
-import { RealiserMissionComponent } from './Components/realiser-mission/realiser-mission.component';
-import { NcComponent } from './Components/nc/nc.component';
-import { QuestionnaireListComponent } from './Components/questionnaire-list/questionnaire-list.component';
-import { QuestionsComponent } from './Components/questions/questions.component';
+import { AddTacheComponent } from './Components/add-tache/add-tache.component';
+import { ListeTacheComponent } from './Components/liste-tache/liste-tache.component';
+import { UpdateTacheComponent } from './Components/update-tache/update-tache.component';
+import { DetailTacheComponent } from './Components/detail-tache/detail-tache.component';
+import { DeleteTacheComponent } from './Components/delete-tache/delete-tache.component';
+import { AddControlComponent } from './Components/add-control/add-control.component';
+import { ListControlComponent } from './Components/list-control/list-control.component';
+import {EspaceTravailComponent} from './Components/espace-travail/espace-travail.component';
+import {RealiserMissionComponent} from './Components/realiser-mission/realiser-mission.component';
+import {QuestionnaireListComponent} from './Components/questionnaire-list/questionnaire-list.component';
+import {NcComponent} from './Components/nc/nc.component';
+import {QuestionsComponent} from './Components/questions/questions.component';
+import { AddNcComponent } from './Components/add-nc/add-nc.component';
+import { ListeNcComponent } from './Components/liste-nc/liste-nc.component';
+import { SuggestionComponent } from './Components/suggestion/suggestion.component';
+import { AddSuggestionComponent } from './Components/add-suggestion/add-suggestion.component';
+import { ListeSuggestionComponent } from './Components/liste-suggestion/liste-suggestion.component';
+import { AuditComponent } from './Components/audit/audit.component';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -77,11 +86,24 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AdminComponent,
     ListClientComponent,
     AddClientComponent,
+    AddTacheComponent,
+    ListeTacheComponent,
+    UpdateTacheComponent,
+    DetailTacheComponent,
+    DeleteTacheComponent,
+    AddControlComponent,
+    ListControlComponent,
     EspaceTravailComponent,
     RealiserMissionComponent,
     NcComponent,
     QuestionnaireListComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    AddNcComponent,
+    ListeNcComponent,
+    SuggestionComponent,
+    AddSuggestionComponent,
+    ListeSuggestionComponent,
+    AuditComponent
   ],
   imports: [
     BrowserModule,
@@ -97,8 +119,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BsDropdownModule.forRoot(),
     PerfectScrollbarModule,
   ],
-
- providers: [httpInterceptorProviders],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

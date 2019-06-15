@@ -1,0 +1,28 @@
+<form *ngIf="idcontroleIn">
+  <div class="form-group row">
+    <label  class="col-sm-2 col-form-label">Description</label>
+  </div>
+
+  <div class="form-group row">
+    <textarea type="text" class="form-control" #des></textarea>
+  </div>
+
+  <div class="form-group row">
+    <button (click)="add(0,idcontroleIn,des.value)" class="btn btn-primary">Confirmer</button> &nbsp;
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>

@@ -1,0 +1,58 @@
+<h1 class="display-4">Ajout Control</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+
+      <div class="form-group">
+        <label>Titre Controle</label>
+        <input id="titreControl" class="form-control"  #titre/>
+      </div>
+
+    </div>
+
+
+    <div class="col-sm">
+
+
+      <div class="form-group">
+        <label>Description</label>
+        <textarea id="DescriptionControl" class="form-control" rows="5"  #description></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Evidence</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1" #ProfilePic>
+
+      </div>
+
+
+    </div>
+
+
+
+
+
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+      <button type="button" class="btn btn-primary">Annuler</button> &nbsp;
+      <button class="btn btn-primary" (click)="add(
+  0,
+   titre.value,
+  description.value
+  ); ">
+        Enregistrer
+      </button>
+    </div>
+
+  </div>
+</div>

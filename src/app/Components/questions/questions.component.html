@@ -5,11 +5,12 @@
       <div class="col-sm">
 
         <div class="form-group" *ngFor="let question of questionsDisplay">
-          <label>{{question.question}}</label>
+
+          <label> {{question.question}}</label>
           <input [(ngModel)]="question.reponse" class="form-control"/>
+          <button (click)="save(question.id,question)">Valider </button>
+
         </div>
-
-
 
 
 
